@@ -1,0 +1,189 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300;1,400&display=swap');
+
+:root{
+    --mainColor: #00b894;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(avatar.jpg);
+
+   background-repeat: no-repeat;
+   background-size: cover;
+   margin: 0 ;
+   font-family:'Montserrat', sans-serif;;
+}
+header nav{
+   color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 30px 5% 0 5%;
+
+}
+header nav h1{
+  margin: 0;
+  font-style: italic;
+  color: #ECF0F1;
+
+}
+header nav h1 strong{
+    color: var(--mainColor);
+}
+header nav .anglet{
+ display: flex;
+ align-items: center;
+}
+header nav .anglet p{
+    margin: 0 15px 0 0;
+}
+header nav .anglet p::after{
+    content: "";
+    padding:1px;
+    width: 15px;
+    position: relative;
+    background-color: var(--mainColor);
+}
+header nav .anglet p:hover{
+
+    overflow: hidden;
+color: var(--mainColor);
+ text-shadow:var(--mainColor) 5px 0 5px;
+
+}
+@keyframes changeConte {
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+        background-color: linear-gradient(#71BA51,#6C8784,#97CE68);
+    }
+}
+header .title{
+    color:#ECF0F1;
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    font-size: 30px;
+   
+}
+.title .content:after{
+    content: "";
+  animation: changetext 10s  linear;
+  color: white;
+}
+
+@keyframes changetext{
+   0%{content: "";}
+    20%{content: " Dominic Purcell" ;}
+    35%{content: "Fernando Sucre" ;}
+    60%{content: "Theodore Bagwell";}
+    80%{content: "Wentworth Miller ...";}
+    90%{content: "in";}
+    100%{content: "....";}
+}
+
+.title .content{
+
+    position: relative;
+    font-style: 14vw;
+    color: #252839;
+    -webkit-text-stroke:0.3vw #323d52;
+    text-transform:uppercase;
+
+}
+header .titl {
+     color:#ECF0F1;
+     font-size: 50px;
+     font-weight: bold;
+     font-style: 14vw;
+     text-transform: uppercase;
+      -webkit-text-stroke:0.3vw var(--mainColor);
+  }
+header .titl .fcontent::before{
+    content:attr(data-text);
+     top: 45%;
+    left: 35%;
+    position: absolute;
+    text-shadow:var(--mainColor) 5px 0 5px;
+    opacity: 0;
+    overflow: hidden;
+    animation: animate 8s linear infinite alternate;
+   animation-delay:10s;
+
+}
+@keyframes animate{
+   0%{
+        opacity: 1;
+       
+   }
+    
+    100%{
+        opacity: 0;
+        
+    }
+}
+header .buttons{
+    position: absolute;
+    top: 70%;
+    left: 45%;
+ 
+}
+button{
+    padding: 15px;
+    width: 150px;
+    border-radius: 5%;
+    cursor: pointer;
+    border:none;
+          font-family: inherit;
+    font-weight: bold;
+
+}
+header .buttons .btn:hover{
+   background:  #323d52 ;
+    color: #000;
+}
+
+header .buttons .bttn{
+    background-color: var(--mainColor);
+    box-shadow: 5px 0 5px 0 ;
+
+}
+header .buttons .bttn:hover{
+    background-color:
+}
+
+@media screen and (max-width:480px){
+    header{
+        width:100%;
+        background-image: url(scofield.jpg);
+
+    }
+    header nav .anglet{
+    display: flex;
+    flex-direction: column;
+    }
+    header nav .anglet p{
+        margin-bottom: 15px;
+    }
+    header .bttn{
+      margin-bottom: 15px;
+    }
+    header .content{
+      font-size: 20px;
+    }
+    header .titl .fcontent{
+        font-size: 15px;
+    }
+
+}
